@@ -1,8 +1,23 @@
 class PlacesController < ApplicationController
 
-  @place = Place.find(params[:id])
-  @create_place = Place.create()
-  @update_place = Place.update()
-  @destroy_place = Place.destroy()
+  def show
+    @place = Place.show()
+    render :json @place
+  end
+
+  def create
+    @create = Place.create()
+    render :json @create
+  end
+
+  def update
+    @update = Place.update()
+    render :json @update
+  end
+
+  def destroy
+    @destroy = Place.destroy()
+    render :json @destroy
+  end
 
 end

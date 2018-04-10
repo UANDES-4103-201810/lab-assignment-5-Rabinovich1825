@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "/users/show", to: "users#show"
+  get "/users/:id", to: "users#show"
   post "/users/create", to: "users#create"
   post "/users/update", to: "users#update"
   post "/users/destroy", to: "users#destroy"
-  get "/users/more-tickets-bought"
 
   get "/events/:id", to: "events#show"
   post "/events/create", to: "events#create"
